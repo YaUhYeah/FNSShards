@@ -1,0 +1,8 @@
+name: FNSShards
+version: '${project.version}'
+main: org.yauhyeah.fnsshards.FNSShards
+api-version: 1.19
+authors: [ YaUhYeah ]
+description: http://www.fairnsquaremc.com
+commands:
+  shard:
