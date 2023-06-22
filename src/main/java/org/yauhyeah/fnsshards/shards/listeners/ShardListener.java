@@ -76,7 +76,7 @@ public class ShardListener implements Listener {
                         if (shard != null) {
                             e.setCancelled(true);
                             pop(player, itemStackInHand, 1);
-                            boolean didPlayerWin = new Random().nextInt(101) > shard.getChance();
+                            boolean didPlayerWin = new Random().nextInt(101) <= shard.getChance();
                             playAnimation(shard, 4, player, getShardOpeningInventory(), didPlayerWin);
                             playersOpeningShard.add(player);
                         }
@@ -166,7 +166,7 @@ public class ShardListener implements Listener {
                                     }
                                 } else {
                                     reciever.playSound(reciever.getLocation(), Sound.ENTITY_VILLAGER_NO, 1.5F, 1.0F);
-                                    reciever.sendMessage(StringUtils.getPrefix() + " Failure, shard lost, but instead, you won: $" + NumberUtils.withLargeIntegers(amt) + "!");
+                                    reciever.sendMessage(StringUtils.getPrefix() + " Failure, shard lost, but instead, you won: " + NumberUtils.withLargeIntegers(amt) + " points!");
                                     for (String cmd : shard.getLoseReward().getRewardCmds()) {
                                         String cmd1 = cmd.replace("%amount%", amt + "");
                                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), cmd1.replace("%player%", reciever.getName()));

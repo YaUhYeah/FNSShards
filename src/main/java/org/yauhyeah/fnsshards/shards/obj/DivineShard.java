@@ -34,7 +34,7 @@ public class DivineShard {
         lore.add(StringUtils.colorize("&7A chance to win the &e" + shardName + "&7!"));
         lore.add("");
         lore.add(StringUtils.colorize("&aWinning: &7Grants access to the prize."));
-        lore.add(StringUtils.colorize("&cLosing: &7Rewards money from &e$" + NumberUtils.withLargeIntegers(lowerRangePrize) + " - $" + NumberUtils.withLargeIntegers(upperRangePrize) + ""));
+        lore.add(StringUtils.colorize("&cLosing: &7Rewards points from &e" + NumberUtils.withLargeIntegers(lowerRangePrize) + " - " + NumberUtils.withLargeIntegers(upperRangePrize) + ""));
         meta.setLore(lore);
         this.itemShard.setItemMeta(meta);
         NBTItem item = new NBTItem(this.itemShard);
